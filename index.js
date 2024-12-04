@@ -308,8 +308,6 @@ if (spend < 50) {
 const numbers = /\d/;
 const special = /^\S+.*\S+$/;
 const password = "Passs1234!";
-console.log(numbers.test(password));
-console.log(special.test(password));
 if (password.length < 6) {
   console.log("Your password is a Weak");
 } else if (
@@ -379,7 +377,16 @@ if (gb< 5) {
 
 // Sample Input: let age = 30, income = 30000, creditScore = 650;
 // Sample Output: "You are eligible for the loan"
-
+const ag=30;
+const income=30000;
+const creditScore=650;
+if(ag>=21 && income>=25000 && creditScore>600){
+  console.log("You are eligible for the loan");
+  
+}
+else{
+  console.log("You are not eligible for the loan");
+}
 // 22
 
 // Write a program for an online grading system where the final grade depends on a combination of attendance and exam scores:
@@ -421,7 +428,32 @@ if (Bat < 60) {
 // const metTarget = true
 // const attendance = 95;
 // Sample Output: "Your total salary is $2900"
+let yearsWorked=6;
+const metTarget=true;
+const attendance=95;
+if(yearsWorked>=5){
+console.log("Your total salary is $2500");
+}
+else if(metTarget===true){
 
+  console.log("Your total salary is $2300");
+}
+else if(metTarget===true && yearsWorked>=5 ){
+
+  console.log("Your total salary is $2800");
+}
+else if(attendance>=90){
+  console.log("Your total salary is $2100");
+}
+else if(attendance>=90 && metTarget===true){
+  console.log("Your total salary is $2400");
+}
+else if(attendance>=90 && yearsWorked===true){
+  console.log("Your total salary is $2600");
+}
+else{
+  console.log("Your total salary is $2900");
+}
 // 24
 
 // Create a program to determine a runner’s performance in a marathon based on time and gender:
@@ -439,3 +471,27 @@ if (Bat < 60) {
 // let gender = 'Female';
 // const time = '2:45:00';
 // Sample Output: "Your performance level is Advanced"
+const gender="woman";
+const Time=2;
+if(gender==="woman" && Time<=2){
+console.log("Your performance level Elite");
+
+}
+else if(gender==="woman" && Time<=3){
+console.log("Your performance level is Advanced");
+}
+else if(gender==="woman" && Time<=4){
+  console.log("Your performance level is Amateur");
+  }
+ else if(gender==="man" && Time<=2){
+    console.log("Your performance level Elite");
+    }
+  else if(gender==="man" && Time<=3){
+   console.log("Your performance level is Advanced");
+  }
+ else if(gender==="man" && Time<=4){
+    console.log("Your performance level is Amateur");
+ }
+ else{
+  console.log("Please another time");
+ }
